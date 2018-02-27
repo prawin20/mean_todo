@@ -11,6 +11,7 @@ mongoose.connect(db.url);
 var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
+app.use(express.compress());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(methodOverride('X-HTTP-Method-Override')); 
