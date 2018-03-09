@@ -9,7 +9,7 @@ myApp.controller("myCtrl",function($scope,$http){
         $http.post("/api/name",$scope.name).then(function(response){
         $scope.names=response.data;
     })
-    $scope.name="";
+    $scope.name.n="";
     };
     $scope.remove=function(id){
         $http.delete("/api/name/"+id).then(function(response){
